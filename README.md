@@ -1,2 +1,13 @@
 # Zombie-Runner-1P-shooter-game
 A one person shooter game that I'm currently building using Unity3D and C#
+
+## GAME DESIGN
+
+### Player Expereince
+-Intense
+
+### Core Mechanics
+- Shoot Enemies
+
+### Core game loop:
+- Collect ammo, shoot enemies, and reach end of level
