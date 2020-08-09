@@ -6,11 +6,10 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField] Transform target;
     [SerializeField] float chaseRange = 5f;
-
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
-
+    
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -27,16 +26,12 @@ public class EnemyAI : MonoBehaviour
             isProvoked = true;
         }
     }
-
-        // if (distanceToTarget <= chaseRange)
     private void EngageTarget()
     {
         if (distanceToTarget >= navMeshAgent.stoppingDistance)
         {
-            navMeshAgent.SetDestination(target.position);
             ChaseTarget();
         }
-
         if (distanceToTarget <= navMeshAgent.stoppingDistance)
         {
             AttackTarget();
@@ -45,11 +40,14 @@ public class EnemyAI : MonoBehaviour
 
     private void ChaseTarget()
     {
+        GetComponent<Animator>().SetBool("attack", false);
+        GetComponent<Animator>().SetTrigger("move");
         navMeshAgent.SetDestination(target.position);
     }
 
     private void AttackTarget()
     {
+        GetComponent<Animator>().SetBool("attack", true);
         Debug.Log(name + " has seeked and is destroying " + target.name);
     }
 
