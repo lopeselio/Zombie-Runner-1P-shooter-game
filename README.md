@@ -31,3 +31,6 @@ This game is intended to work on PC ( Windows and Mac )
 - Flashlight and battery pickup
 - Probuilder Geometry
 
+### screenshot
+![image](https://github.com/lopeselio/Zombie-Runner-1P-shooter-game/blob/master/Screenshot%20(26).png)
+
