@@ -17,7 +17,7 @@ public class EnemyAttack : MonoBehaviour
     
     public void OnDamageTaken()
     {
-        Debug.Log(nameof + "I know I took damage");
+        Debug.Log(name + "I know I took damage");
     }
 
     public void AttackHitEvent()
